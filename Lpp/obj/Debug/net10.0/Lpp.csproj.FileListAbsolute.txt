@@ -1,0 +1,14 @@
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/bin/Debug/net10.0/Lpp
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/bin/Debug/net10.0/Lpp.deps.json
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/bin/Debug/net10.0/Lpp.runtimeconfig.json
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/bin/Debug/net10.0/Lpp.dll
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/bin/Debug/net10.0/Lpp.pdb
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.AssemblyInfoInputs.cache
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.AssemblyInfo.cs
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.csproj.CoreCompileInputs.cache
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.dll
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/refint/Lpp.dll
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.pdb
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.genruntimeconfig.cache
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/ref/Lpp.dll

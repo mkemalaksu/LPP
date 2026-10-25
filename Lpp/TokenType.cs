@@ -1,0 +1,37 @@
+public enum TokenType
+{
+    Local,
+    Semicolon,
+    Number,
+    Identifier,
+    Plus,
+    Minus,
+    Star,
+    Slash,
+    Assign,
+    
+    EqualEqual,
+    BangEqual,
+    Greater,
+    GreaterEqual,
+    Less,
+    LessEqual,
+    Bang,
+    
+    If,
+    Else,
+    While,
+    LeftBrace,
+    RightBrace,
+    
+    LeftParenthesis,
+    RightParenthesis,
+    Comma,
+    String,
+    Modulo,
+    LeftBracket,
+    RightBracket,
+    Function,
+    Return,
+    EOF,
+}
