@@ -1,0 +1,3 @@
+local mesaj = "Bu dosya Lpp tarafindan uretildi!";
+write_to_file("cikti.txt", mesaj);
+print("Dosya basariyla yazildi!");

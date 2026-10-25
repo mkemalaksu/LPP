@@ -12,3 +12,4 @@
 /Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.pdb
 /Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.genruntimeconfig.cache
 /Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/ref/Lpp.dll
+/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/Debug/net10.0/Lpp.sourcelink.json

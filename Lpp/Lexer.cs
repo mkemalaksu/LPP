@@ -33,16 +33,24 @@ public class Lexer
         switch (c)
         {
             case '+':
-                AddToken(TokenType.Plus);
+                if (Match('+')) AddToken(TokenType.PlusPlus);
+                else if (Match('=')) AddToken(TokenType.PlusEqual);
+                else AddToken(TokenType.Plus);
                 break;
             case ';':
                 AddToken(TokenType.Semicolon);
                 break;
+            case '?':
+                AddToken(TokenType.Question);
+                break;
             case '-':
-                AddToken(TokenType.Minus);
+                if (Match('-')) AddToken(TokenType.MinusMinus);
+                else if (Match('=')) AddToken(TokenType.MinusEqual);
+                else AddToken(TokenType.Minus);
                 break;
             case '*':
-                AddToken(TokenType.Star);
+                if (Match('=')) AddToken(TokenType.StarEqual);
+                else AddToken(TokenType.Star);
                 break;
             case '/':
                 if (Match('/'))
@@ -50,7 +58,8 @@ public class Lexer
                     while (Peek() != '\n' && !IsAtEnd()) Advance();
                     break;
                 }
-                AddToken(TokenType.Slash);
+                if (Match('=')) AddToken(TokenType.SlashEqual);
+                else AddToken(TokenType.Slash);
                 break;
             case '=':
                 AddToken(Match('=') ? TokenType.EqualEqual : TokenType.Assign);
@@ -69,6 +78,16 @@ public class Lexer
                 AddToken(Match('=') ? TokenType.GreaterEqual : TokenType.Greater);
                 break;
 
+            case ':': AddToken(TokenType.Colon); break;
+            case '.': AddToken(TokenType.Dot); break;
+            case '$':
+                if (Match('"'))
+                {
+                    ScanInterpolatedString();
+                    break;
+                }
+                Console.WriteLine("Unexpected token: $");
+                break;
             case ',':
                 AddToken(TokenType.Comma);
                 break;
@@ -83,6 +102,26 @@ public class Lexer
                 break;
             case '%':
                 AddToken(TokenType.Modulo);
+                break;
+            case '&':
+                if (Match('&'))
+                {
+                    AddToken(TokenType.And);
+                }
+                else
+                {
+                    Console.WriteLine("Unexpected character: &");
+                }
+                break;
+            case '|':
+                if (Match('|'))
+                {
+                    AddToken(TokenType.Or);
+                }
+                else
+                {
+                    Console.WriteLine("Unexpected character: |");
+                }
                 break;
             case '\n':
                 line++;
@@ -134,6 +173,29 @@ public class Lexer
         AddToken(TokenType.String, value);
     }
 
+    void ScanInterpolatedString()
+    {
+        while (Peek() != '"' && !IsAtEnd())
+        {
+            if (Peek() == '\n')
+            {
+                line++;
+                column = 1;
+            }
+            Advance();
+        }
+
+        if (IsAtEnd())
+        {
+            throw new Exception($"[Line {line}] Unterminated interpolated string.");
+        }
+
+        Advance();
+
+        string value = source.Substring(start + 2, position - start - 3);
+        AddToken(TokenType.InterpolatedString, value);
+    }
+
     void Number()
     {
         while (char.IsDigit(Peek())) Advance();
@@ -161,6 +223,17 @@ public class Lexer
             case "if": AddToken(TokenType.If); break;
             case "else": AddToken(TokenType.Else); break;
             case "while": AddToken(TokenType.While); break;
+            case "for": AddToken(TokenType.For); break;
+            case "try": AddToken(TokenType.Try); break;
+            case "catch": AddToken(TokenType.Catch); break;
+            case "break": AddToken(TokenType.Break); break;
+            case "continue": AddToken(TokenType.Continue); break;
+            case "in": AddToken(TokenType.In); break;
+            case "class": AddToken(TokenType.Class); break;
+            case "new": AddToken(TokenType.New); break;
+            case "this": AddToken(TokenType.This); break;
+            case "and": AddToken(TokenType.And); break;
+            case "or": AddToken(TokenType.Or); break;
             case "function": AddToken(TokenType.Function); break;
             case "return": AddToken(TokenType.Return); break;
 

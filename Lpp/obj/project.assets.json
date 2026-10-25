@@ -8,7 +8,7 @@
     "net10.0": []
   },
   "packageFolders": {
-    "/Users/mustafakemal/.nuget/packages/": {}
+    "/tmp/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +16,11 @@
       "projectUniqueName": "/Users/mustafakemal/RiderProjects/Lpp/Lpp/Lpp.csproj",
       "projectName": "Lpp",
       "projectPath": "/Users/mustafakemal/RiderProjects/Lpp/Lpp/Lpp.csproj",
-      "packagesPath": "/Users/mustafakemal/.nuget/packages/",
+      "packagesPath": "/tmp/.nuget/packages/",
       "outputPath": "/Users/mustafakemal/RiderProjects/Lpp/Lpp/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/mustafakemal/.nuget/NuGet/NuGet.Config"
+        "/tmp/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"

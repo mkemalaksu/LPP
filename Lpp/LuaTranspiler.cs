@@ -128,7 +128,7 @@ public class LuaTranspiler
             TokenType.Less => "<",
             TokenType.LessEqual => "<=",
             TokenType.EqualEqual => "==",
-            TokenType.BangEqual => "~=", // Lua dilinde eşit değildir işareti ~= şeklindedir!
+            TokenType.BangEqual => "~=", // In Lua, the not-equal operator is ~=
             _ => throw new Exception($"Transpiler Error: Unknown operator {type}")
         };
     }

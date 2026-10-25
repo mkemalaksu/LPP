@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Lpp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03ffde943ce064055d671c1949c02b361bd0b804")]
 [assembly: System.Reflection.AssemblyProductAttribute("Lpp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Lpp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
